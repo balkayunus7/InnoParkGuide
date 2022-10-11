@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/HomePage/GuideCard.dart';
+import 'package:flutter_application_1/HomePage/MainPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.transparent,
             elevation: 0,
           )),
-      home: const GuideCard(),
+      home: const MainPage(),
     );
   }
 }
