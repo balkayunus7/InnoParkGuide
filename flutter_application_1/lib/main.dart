@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/HomePage/GuideCard.dart';
 import 'package:flutter_application_1/HomePage/MainPage.dart';
 
 void main() {

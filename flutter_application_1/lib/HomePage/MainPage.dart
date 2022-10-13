@@ -22,7 +22,7 @@ class _MainPageState extends State<MainPage> {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: const [
+          children: [
             ImageTransition(
               height: 240,
             ),
