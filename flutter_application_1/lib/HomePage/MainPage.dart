@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/HomePage/GuideCard.dart';
 import 'package:flutter_application_1/HomePage/ImageTransition.dart';
+import 'package:flutter_application_1/Products/HomepageBanner.dart';
+import 'GuideCard.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -8,6 +9,8 @@ class MainPage extends StatefulWidget {
   @override
   State<MainPage> createState() => _MainPageState();
 }
+
+var _selectedIndex = 0;
 
 class _MainPageState extends State<MainPage> {
   @override
@@ -24,14 +27,23 @@ class _MainPageState extends State<MainPage> {
         child: Column(
           children: [
             ImageTransition(
-              height: 240,
+              height: 280,
             ),
-            SizedBox(height: 100),
-            GuideCard(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ...List.generate(
+                  homePageBannerList.length,
+                  (index) => Indicator(
+                      isActive: _selectedIndex == index ? true : false),
+                ),
+              ],
+            ),
+            const SizedBox(height: 100),
+            const GuideCard(),
           ],
         ),
       ),
     );
-    ;
   }
 }
