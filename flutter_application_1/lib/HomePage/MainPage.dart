@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/HomePage/ImageTransition.dart';
-import 'package:flutter_application_1/Products/HomepageBanner.dart';
 import 'GuideCard.dart';
+import 'NavBar.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -10,12 +10,11 @@ class MainPage extends StatefulWidget {
   State<MainPage> createState() => _MainPageState();
 }
 
-var _selectedIndex = 0;
-
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: NavBar(),
       appBar: AppBar(
         title: Text('InnoPark',
             style: Theme.of(context)
@@ -25,22 +24,12 @@ class _MainPageState extends State<MainPage> {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: const [
             ImageTransition(
               height: 280,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ...List.generate(
-                  homePageBannerList.length,
-                  (index) => Indicator(
-                      isActive: _selectedIndex == index ? true : false),
-                ),
-              ],
-            ),
-            const SizedBox(height: 100),
-            const GuideCard(),
+            SizedBox(height: 100),
+            GuideCard(),
           ],
         ),
       ),
