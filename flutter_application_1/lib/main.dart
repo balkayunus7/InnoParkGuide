@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
+      theme: ThemeData().copyWith(
           hintColor: Colors.white,
           listTileTheme: const ListTileThemeData(
             contentPadding: EdgeInsets.zero,

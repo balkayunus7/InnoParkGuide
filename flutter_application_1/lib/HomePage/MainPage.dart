@@ -20,7 +20,7 @@ class _MainPageState extends State<MainPage> {
             style: Theme.of(context)
                 .textTheme
                 .headlineMedium
-                ?.copyWith(color: Colors.white)),
+                ?.copyWith(color: Colors.black)),
       ),
       body: SingleChildScrollView(
         child: Column(
